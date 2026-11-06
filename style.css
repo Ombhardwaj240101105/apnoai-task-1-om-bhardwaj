@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -180,4 +180,47 @@ footer {
     .hero h1 {
         font-size: 1.5rem;
     }
+}
+.theme-toggle {
+   background: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+body.dark-mode {
+    background: #121212;
+    color: #e5e5e5;
+}
+
+body.dark-mode .container {
+    background: #121212;
+}
+
+body.dark-mode .container.alt-bg {
+    background: #1e1e2d;
+}
+
+body.dark-mode .container h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .container p {
+    color: #d1d1d1;
+}
+
+body.dark-mode .service-card {
+    background: #292938;
+    color: #ffffff;
+}
+
+body.dark-mode .service-card h3 {
+    color: #ffffff;
 }
