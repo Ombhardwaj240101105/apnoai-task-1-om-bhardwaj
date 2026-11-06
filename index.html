@@ -9,13 +9,14 @@
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="logo">Eventora</div>
+        <div class="logo">⭐Eventora</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
     </nav>
 
     <!-- Hero Section (Home) -->
@@ -34,14 +35,14 @@
 
     <!-- Services Section -->
     <section id="services" class="container alt-bg">
-        <h2>Our Services</h2>
+        <h2>What I Offer</h2>
         <div class="services-grid">
             <div class="service-card">
                 <h3>Birthday Planning</h3>
                 <p>We organize fun and memorable birthday celebrations with creative decorations, themes, and entertainment.</p>
             </div>
             <div class="service-card">
-                <h3>Wedding Management</h3>
+                <h3>Wedding Planning</h3>
                 <p>From beautiful decorations to complete event coordination, we help make your dream wedding a reality.</p>
             </div>
             <div class="service-card">
@@ -54,13 +55,34 @@
     <!-- Contact Section -->
     <section id="contact" class="container">
         <h2>Contact Eventora</h2>
-        <p>Email: eventora77@gmail.com</p>
-        <p>Phone: contact us for details</p>
+        <p>Email: ombhardwaj9222@gmail.com</p>
+        <p>Phone: +91 8102935073</p>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Om Bhardwaj. Built for ApnoAI Internship Task 1.</p>
     </footer>
+        <script>
+        const toggleButton = document.getElementById("theme-toggle");
+
+       
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark-mode");
+            toggleButton.textContent = "☀️";
+        }
+
+        toggleButton.addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+
+            if (document.body.classList.contains("dark-mode")) {
+                localStorage.setItem("theme", "dark");
+                toggleButton.textContent = "☀️";
+            } else {
+                localStorage.setItem("theme", "light");
+                toggleButton.textContent = "🌙";
+            }
+        });
+    </script>
 </body>
 </html>
